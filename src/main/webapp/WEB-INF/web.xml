@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <!--url-pattern配置成/springMVC/*.jsp是错误的-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/springMVC/helloWorldBasic.jsp</url-pattern>
+        <!--<url-pattern>/springMVC/*.jsp</url-pattern>-->
+        <load-on-startup>1</load-on-startup>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <servlet-class>com.corp.will.servlet.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloWorldServlet</servlet-name>
+        <url-pattern>/servlet/helloWorld.jsp</url-pattern>
+    </servlet-mapping>
+
+</web-app>
