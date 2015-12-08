@@ -11,9 +11,21 @@
         <dependencies>
             <dependency>
                 <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
             </dependency>
+
+            <dependency>
+                <groupId>javax.servlet.jsp.jstl</groupId>
+                <artifactId>jstl-api</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>javax.servlet</groupId>-->
+                <!--<artifactId>servlet-api</artifactId>-->
+                <!--<version>2.5</version>-->
+            <!--</dependency>-->
 
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -46,10 +58,23 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--没有的话访问jsp页面错误The method getDispatcherType() is undefined for the type HttpServletRequest-->
+        <!--http://stackoverflow.com/questions/26436463/getdispatchertype-is-undefined-for-the-type-httpservletrequest-->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
         </dependency>
+
+        <!--视图解析必须-->
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>servlet-api</artifactId>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework</groupId>

@@ -12,4 +12,11 @@
 
     <!--这个bean的name必须与web.xml中的url-pattern完全相同，不然报404-->
     <bean name="/springMVC/helloWorldBasic.jsp" class="com.corp.will.controller.HelloWorldBasicController"/>
+
+    <!--视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>

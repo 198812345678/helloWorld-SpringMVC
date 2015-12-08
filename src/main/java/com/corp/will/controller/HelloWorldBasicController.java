@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloWorldBasicController implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse httpServletResponse) throws Exception {
-        System.out.println("hello world!");
-        return null;
+//        System.out.println("hello world!");
+        ModelAndView modelAndView = new ModelAndView("helloWorld");
+        modelAndView.addObject("message", "hello world!");
+        return modelAndView;
     }
 }
