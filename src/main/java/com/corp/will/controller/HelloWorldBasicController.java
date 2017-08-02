@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by will.wang on 2015/12/7.
  */
 public class HelloWorldBasicController implements Controller {
-    @Override
+//    @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse httpServletResponse) throws Exception {
 //        System.out.println("hello world!");
         ModelAndView modelAndView = new ModelAndView("helloWorld");
