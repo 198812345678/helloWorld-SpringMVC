@@ -18,5 +18,6 @@
 
 	<tx:annotation-driven/>
 
+	<bean id="aopLogSolution" class="com.corp.will.logic.AopLogSolution" />
 
 </beans>

@@ -2,6 +2,7 @@ package com.corp.will.logic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -25,6 +26,8 @@ public class SolutionTest {
     @Test
     public void doSomething() throws Exception {
         aopLogSolution.doSomething();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
+        context.getBean("aopLogSolution", MyInterface.class);
     }
 
     @Test
